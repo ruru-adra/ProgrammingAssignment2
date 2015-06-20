@@ -2,18 +2,28 @@
 ## functions do
 
 ## Write a short comment describing this function
-
+#store a list of functions
 makeCacheMatrix <- function(x = matrix()) {
+
          inv<- NULL
+         #changes the vector y and stored in the main function
          set<- function(y){
                x<<- y
+               #assign NULL to the value of inverse
                inv<<- NULL
 }
+   #returns vector x and stored in the main function
    get<- function() x
+
+   #store the value of the input in a variable inv into setinverse dan return(getinverse)
    setinverse<- function(inverse) inv<<- inverse
    getinverse<- function() inv
+
+   #store two functions
    list(set=set, get=get, setinverse=setinverse, getinverse=getinverse)
+
 }
+
 
 ## Write a short comment describing this function
 
